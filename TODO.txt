@@ -1,7 +1,7 @@
 [x] Phyllis
 [x] Conversion
 [x] Palm Page
-[ ] RandomName
+[x] RandomName
 [ ] PowerOff
 [ ] NewShortcut
 [ ] FixKews
