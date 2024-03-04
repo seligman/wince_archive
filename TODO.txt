@@ -2,7 +2,7 @@
 [x] Conversion
 [x] Palm Page
 [x] RandomName
-[ ] PowerOff
+[x] PowerOff
 [ ] NewShortcut
 [ ] FixKews
 [ ] SoundControl
