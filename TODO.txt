@@ -3,6 +3,6 @@
 [x] Palm Page
 [x] RandomName
 [x] PowerOff
-[ ] NewShortcut
+[x] NewShortcut
 [ ] FixKews
 [ ] SoundControl
