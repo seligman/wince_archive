@@ -1,0 +1,24 @@
+#define VERSION_1       1
+#define VERSION_2       1
+#define VERSION_3       8
+#define VERSION_SZ      "1.18"
+#define VERSION_TEXT    _T(VERSION_SZ)
+#define VERSION_YEAR    "2010"
+
+#define IDI_MAINICON                    101
+#define IDD_MAIN                        102
+#define IDR_CONVERSIONS                 103
+#define IDC_UNIT                        1000
+#define IDC_FROM                        1001
+#define IDC_TO                          1002
+#define IDC_FROM_EDIT                   1003
+#define IDC_TO_EDIT                     1004
+#define ID_CUSTOM						500
+#define IDR_MAINMENU                    501
+#define IDM_EXIT                        502
+#define IDR_MAIN_TOOLBAR                503
+#define IDS_FILE                        504
+#define IDM_UPDATE                      505
+#define IDS_HELP                        506
+#define IDM_ABOUT                       507
+#define IDM_SWAP                        508

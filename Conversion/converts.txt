@@ -1,0 +1,301 @@
+1:1:Area
+2:4046.8564224:Acres
+2:100:Ares
+2:0.000506707479:Circular inches
+2:1e4:Hectares
+2:485000:Hides
+2:1011.7141056:Roods
+2:1e-4:Square centimeters
+2:0.09290304:Square feet (UK & US)
+2:0.092903411613:Square feet (US survey)
+2:0.00064516:Square inches
+2:1e6:Square kilometers
+2:1:Square meters
+2:2589988.110336:Square miles
+2:1e-6:Square millimeters
+2:9.290304:Squares (of timber)
+2:25.29285264:Square rods (or poles)
+2:0.83612736:Square yards
+2:93239571.972:Townships
+
+1:1:Bits and Bytes
+2:0.125:Bits [b]
+2:1:Bytes [B]
+2:128:Kilobits [Kb]
+2:1024:Kilobytes [KB]
+2:131072:Megabits [Mb]
+2:1048576:Megabytes [MB]
+2:134217728:Gigabits [Gb]
+2:1073741824:Gigabytes [GB]
+2:137438953472:Terabits [Tb]
+2:1099511627776:Terabytes [TB]
+2:140737488355328:Petabits [Pb]
+2:1125899906842624:Petabytes [PB]
+2:144115188075855872:Exabits [Eb]
+2:1152921504606846976:Exabytes [EB]
+
+1:1:Density
+2:0.000014253948343691203:Grains/gallon (UK)
+2:0.000017118011571775823:Grains/gallon (US)
+2:1:Grams/cubic centimeters
+2:1e-3:Grams/liter
+2:1:Grams/milliliters
+2:1e-3:Kilograms/cubic meters
+2:1:Kilograms/liter
+2:1:Megagrams/cubic meter
+2:1e-3:Milligrams/milliliter
+2:1e-6:Milligrams/liter
+2:1.729994044:Ounches/cubic inch
+2:0.006236023:Ounches/gallon (UK)
+2:0.007489152:Ounches/gallon (US)
+2:27.679904:Pounds/cubic inch
+2:0.016018463:Pounds/cubic foot
+2:0.099776373:Pounds/gallon (UK)
+2:0.119826427:Pounds/gallon (US)
+2:0.51531788206:Slugs/cubic foot
+2:1:Tonnes/cubic meter
+2:1.328939184:Tons (UK)/cubic yard 
+2:1.186552843:Tons (US)/cubic yard
+
+1:1:Energy and Work
+2:1055.056:Btu (IT)
+2:1054.350:Btu (th)
+2:1055.87:Btu (mean)
+2:4.1868:Calories (IT)
+2:4.184:Calories (th)
+2:4.19002:Calories (mean)
+2:4.18580:Calories (15C)
+2:4.18190:Calories (20C)
+2:4186:Calories (food)
+2:1900.4:Centigrade heat units
+2:1e-7:Ergs
+2:1.355817:Foot pounds-force
+2:0.042140:Foot poundals
+2:1e9:Gigajoules (GJ)
+2:2684520:Horsepower hours
+2:1:Joules (J)
+2:4186.8:Kilocalories (IT)
+2:4184:Kilocalories (th)
+2:9.80665:Kilogram-force meters
+2:1e3:Kilojoules (kJ)
+2:3600000:Kilowatt hours (kWh)
+2:1e6:Megajoules (MJ)
+2:1:Newton meters (Nm)
+2:105500000:Therms
+2:1:Watt seconds (Ws)
+2:3600:Watt hours (Wh)
+
+1:1:Force
+2:1e-5:Dynes
+2:9.80665:Kilograms force
+2:1000:Kilonewtons (kN)
+2:4448.222:Kips
+2:1e6:Meganewtons (MN)
+2:1:Newtons (N)
+2:4.448222:Pounds force
+2:0.138255:Poundals
+2:1000:Sthenes (=kN)
+2:9806.65:Tonnes force
+2:9964.016:Tons force (UK)
+2:8896.443:Tons force (US)
+
+1:1:Length and Distance
+2:1e-10:Angstroms (A)
+2:149598550000:Astronomical units (AU)
+2:0.008467:Barleycorns
+2:182.88:Cables
+2:0.01:Centimeters (cm)
+2:20.1168:Chains (Surveyors')
+2:0.1:Decimeters
+2:0.875:Ells (UK)
+2:0.0042333:Ems (pica)
+2:1.8288:Fathoms
+2:0.3048:Feet (UK and US)
+2:0.304800609601219202438:Feet (US survey)
+2:201.168:Furlongs
+2:0.106:Hands
+2:100:Hectometers
+2:0.0254:Inches
+2:1000:Kilometers (km)
+2:9.4605e15:Light years
+2:1:Meters (m)
+2:1e-6:Micrometers
+2:1609.344:Miles (UK and US)
+2:1852:Miles (nautical)
+2:0.001:Millimeters (mm)
+2:1e-9:Nanometers
+2:3.085677e16:Parsecs
+2:1e-12:Picometers
+2:0.9144:Yards
+
+1:1:Mass and Weight
+2:0.0002:Carats (metric)
+2:5.980e24:Earth masses
+2:0.00006479891:Grains
+2:1e-3:Grams
+2:50.80234544:Hudredweights (long)
+2:45.359237:Hudredweights (short)
+2:1:Kilograms (kg)
+2:0.028349523125:Ounces (US, avoirdupois)
+2:0.0311034768:Ounces (troy)
+2:0.45359237:Pounds (US, avoirdupois)
+2:0.3732417216:Pounds (troy)
+2:1.989e30:Solar masses
+2:14.593903:Slugs (g-pounds)
+2:6.35029318:Stones
+2:1016.0469088:Tons (UK or long)
+2:907.18474:Tons (US or short)
+2:1000:Tonnes
+
+1:1:Money (2004-11-22)
+2:1.0000: Euro
+2:1.3033: US dollar (USD)
+2:134.47: Japanese yen (JPY)
+2:7.4312: Danish krone (DKK)
+2:0.70255: Pound sterling (GBP)
+2:8.9569: Swedish krona (SEK)
+2:1.5157: Swiss franc (CHF)
+2:87.04: Icelandic krona (ISK)
+2:8.168: Norwegian krone (NOK)
+2:1.9559: Bulgarian lev (BGN)
+2:0.5784: Cyprus pound (CYP)
+2:31.09: Czech koruna (CZK)
+2:15.6466: Estonian kroon (EEK)
+2:246.2: Hungarian forint (HUF)
+2:3.4528: Lithuanian litas (LTL)
+2:0.6809: Latvian lats (LVL)
+2:0.4325: Maltese lira (MTL)
+2:4.2283: Polish zloty (PLN)
+2:39678: Romanian leu (ROL)
+2:239.79: Slovenian tolar (SIT)
+2:39.255: Slovakian koruna (SKK)
+2:1877000: Turkish lira (TRL)
+2:1.6657: Australian dollar (AUD)
+2:1.5517: Canadian dollar (CAD)
+2:10.1316: Hong Kong dollar (HKD)
+2:1.836: New Zealand dollar (NZD)
+2:2.1436: Singapore dollar (SGD)
+2:1388.54: South Korean won (KRW)
+2:7.8312: South African rand (ZAR)
+
+1:1:Power
+2:0.293071:Btu/hour
+2:17.584267:Btu/minute
+2:1055.056:Btu/second
+2:0.001639:Calories/hour
+2:0.06978:Calories/minute
+2:4.1868:Calories/second
+2:0.022597:Foot pounds-force/minute
+2:1.35582:Foot pounds-force/second
+2:1e9:Gigawatts (GW)
+2:746:Horsepowers (electric)
+2:735.499:Horsepowers (metric)
+2:1:Watts (W)
+2:0.0002777777777777778:Joules/hour
+2:0.016666666666666666:Joules/minute
+2:1:Joules/second
+2:1.163:Kilocalories/hour
+2:69.78:Kilocalories/minute
+2:0.002724:Kilogram-force meters/hour
+2:0.163444:Kilogram-force meters/minute
+2:1e3:Kilowatts (kW)
+2:1e6:Megawatts (MW)
+
+1:1:Pressure and Stress
+2:101325:Atmospheres
+2:1e5:Bars
+2:1333.22:Centimeters mercury
+2:98.0665:Centimeters water
+2:2989.06692:Feet of water
+2:100:Hectopascals (hPa)
+2:249.08891:Inches of water
+2:3386.388:Inches of mercury
+2:98066.5:Kilogram-forces/sq.centimeter
+2:9.80665:Kilogram-forces/sq.meter
+2:1000:Kilopascals (kPa)
+2:6894760:Kips/sq.inch
+2:1e6:Meganewtons/sq.meter
+2:9806.65:Meters of water
+2:100:Millibars
+2:133.322:Millimeters of mercury
+2:9.80665:Millimeters of water
+2:1e4:Newtons/sq.centimeter
+2:1:Newtons/sq.meter
+2:1e6:Newtons/sq.millimeter
+2:1:Pascals (Pa)
+2:47.880:Pounds-force/sq.foot
+2:6894.757:Pounds-force/sq.inch
+2:1.44816:Poundals/sq.foot
+2:107251:Tons (UK)-force/sq.foot
+2:1544256:Tons (UK)-force/sq.inch
+2:95760:Tons (US)-force/sq.foot
+2:13789500:Tons (US)-force/sq.inch
+2:98066500:Tonnes-force/sq.cm
+2:9806.65:Tonnes-force/sq.meter
+
+1:1:Speed
+2:0.00016666666666666666:Centimeters/minute
+2:0.01:Centimeters/second
+2:0.00008466683600033866:Feet/hour
+2:0.00508:Feet/minute
+2:0.3048:Feet/second
+2:0.0004233341800016934:Inches/minute
+2:0.0254:Inches/second
+2:0.2777777777777778:Kilometers/hour
+2:1000:Kilometers/second
+2:0.514444:Knots
+2:340.2933:Mach number (ISA/SL)
+2:0.0002777777777777778:Meters/hour
+2:0.016666666666666666:Meters/minute
+2:1:Meters/second (m/s)
+2:0.44704:Miles/hour
+2:26.8224:Miles/minute
+2:1609.344:Miles/second
+2:2.9979e8:Speed of light
+2:0.000254000508001016:Yards/hour
+2:0.01524:Yards/minute
+2:0.9144:Yards/second
+
+1:2:Temperature
+2:0:Celsius
+2:0:Fahrenheit
+2:0:Kelvin
+2:0:Rankine
+2:0:Reaumure
+
+1:1:Volume or Capicity
+2:158.987294928000:Barrels (oil)
+2:36.368720000000:Bushels (UK)
+2:35.239070166880:Bushels (US)
+2:0.010000000000:Centiliters
+2:0.001000000000:Cubic centimeters
+2:1.000000000000:Cubic decimeters
+2:1000000.000000000000:Cubic decameters
+2:28.316846592000:Cubic feet
+2:0.016387064000:Cubic inches
+2:1000.000000000000:Cubic meters
+2:0.000001000000:Cubic millimeters
+2:764.554857984000:Cubic yards
+2:0.275305235679:Cups, dry (US)
+2:0.236588236500:Cups, liquid (US)
+2:0.000716940718:Dash, dry (US)
+2:0.000616115199:Dash, liquid (US)
+2:0.100000000000:Deciliters
+2:0.028413062500:Fluid ounces (UK)
+2:0.029573529563:Fluid ounces (US)
+2:4.546090000000:Gallons (UK)
+2:4.404883770860:Gallons, dry (US)
+2:3.785411784000:Gallons, liquid (US)
+2:1.000000000000:Liters (l or L)
+2:1.000028000000:Liters (1901-1964)
+2:0.001000000000:Milliliters
+2:0.568261250000:Pints (UK)
+2:0.550610471358:Pints, dry (US)
+2:0.473176473000:Pints, liquid (US)
+2:1.136522500000:Quarts (UK)
+2:1.101220942715:Quarts, dry (US)
+2:0.946352946000:Quarts, liquid (US)
+2:0.017206577230:Tablespoons, dry (US)
+2:0.014786764781:Tablespoons, liquid (US)
+2:0.005735525743:Teapoons, dry (US)
+2:0.004928921594:Teaspoons, liquid (US)
