@@ -1,0 +1,9 @@
+[x] Phyllis
+[ ] Conversion
+[ ] Palm Page
+[ ] RandomName
+[ ] PowerOff
+[ ] NewShortcut
+[ ] FixKews
+[ ] SoundControl
+[ ] PocketNav
