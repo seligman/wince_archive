@@ -1,0 +1,277 @@
+#include "resource.h"
+
+#ifdef APSTUDIO_INVOKED
+#error This cannot be invoked from Dev Studio, see comments (i.e., "Edit Code"!)
+// Dev studio won't persist the #ifdefs properly, and it'll 
+// render the command bar for PocketPC's un-editable, so only 
+// edit this file via the text editor.  Remember to add the 
+// #define to resource.h whenever you add something here.
+// (Yes, this does suck) -- Scott
+#endif
+
+#define APSTUDIO_READONLY_SYMBOLS
+#ifdef UNDER_CE
+#include "newres.h"
+#else
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+#endif
+#undef APSTUDIO_READONLY_SYMBOLS
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+
+#ifdef UNDER_CE
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif
+#else
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#define IDC_STATIC	                    -1
+#endif
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PHYLLIS       ICON    DISCARDABLE     "Phyllis.ICO"
+
+
+#ifdef UNDER_CE
+// The lovely, barely documented, PocketPC menu bar
+IDM_MENU RCDATA
+BEGIN
+    IDM_MENU, 2, // Two items
+	I_IMAGENONE, IDM_MAIN_COMMAND1, TBSTATE_ENABLED,
+	TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+	IDS_GAME, 0, 0, // Item 0
+	I_IMAGENONE, IDM_MAIN_COMMAND2, TBSTATE_ENABLED,
+	TBSTYLE_DROPDOWN | TBSTYLE_AUTOSIZE,
+	IDS_HELP, 0, 1, // Item 1
+END
+#endif
+
+IDM_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&Game"
+    BEGIN
+//Just change the order of the menu items to
+// account for the different UIs.
+#ifdef UNDER_CE
+        MENUITEM "E&xit",                       IDM_GAME_EXIT
+        MENUITEM SEPARATOR
+		MENUITEM "&Options...",				   IDM_GAME_OPTIONS
+		MENUITEM "&Stats...",				   IDM_GAME_STATS
+        MENUITEM SEPARATOR
+        MENUITEM "&New Game",                   IDM_GAME_NEW
+#else
+        MENUITEM "&New Game",                   IDM_GAME_NEW
+        MENUITEM SEPARATOR
+		MENUITEM "&Options...",				   IDM_GAME_OPTIONS
+		MENUITEM "&Stats...",				   IDM_GAME_STATS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_GAME_EXIT
+#endif
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      IDM_HELP_ABOUT
+    END
+END
+
+
+IDD_DROP_CARD DIALOG DISCARDABLE  0, 0, 85, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "How Many?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "One card",IDC_CARD1,20,29,43,14
+    PUSHBUTTON      "Two cards",IDC_CARD2,20,44,43,14
+    PUSHBUTTON      "Three cards",IDC_CARD3,20,59,43,14
+    PUSHBUTTON      "Four cards",IDC_CARD4,20,74,43,14
+    LTEXT           "How many cards do you want to place in the discard pile?",
+                    IDC_HOWMANY,3,2,79,27
+END
+
+IDD_EAT_ONE DIALOG DISCARDABLE  0, 0, 85, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Pickup a card?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "One card",IDC_CARD1,20,29,43,14
+    PUSHBUTTON      "Two cards",IDC_CARD2,20,44,43,14
+    PUSHBUTTON      "Three cards",IDC_CARD3,20,59,43,14
+    PUSHBUTTON      "(No card)",IDC_CARD4,20,74,43,14
+    LTEXT           "Do you also want to pickup one of the faceup cards?",
+                    IDC_HOWMANY,3,2,79,27
+END
+
+IDD_FACEUP_DROP DIALOG DISCARDABLE  0, 0, 85, 80
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "More than one?"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "One card",IDC_CARD1,20,29,43,14
+    PUSHBUTTON      "Two cards",IDC_CARD2,20,44,43,14
+    PUSHBUTTON      "Three cards",IDC_CARD3,20,59,43,14
+    LTEXT           "Do you want to play more than one of this faceup card?",
+                    IDC_HOWMANY,3,2,79,27
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 140, 90
+STYLE WS_POPUP | WS_CAPTION 
+#ifdef UNDER_CE
+EXSTYLE WS_EX_CAPTIONOKBTN
+#endif
+CAPTION "About Phyllis"
+FONT 8, "System"
+
+BEGIN
+#ifndef UNDER_CE
+    PUSHBUTTON      "&OK",IDOK,10,65,40,15
+#endif
+	ICON            IDI_PHYLLIS,IDC_STATIC,11,17,20,20
+	LTEXT           "version goes here",IDC_VERSION,40,10,70,8, SS_NOPREFIX
+	LTEXT           "Copyright (C) 2002",IDC_LINE1,40,25,70,8
+	LTEXT           "by Scott Seligman",IDC_LINE2,45,35,70,8
+	LTEXT           "<scott@scottandmichelle.net>",IDC_LINE3,35,45,120,8
+END
+
+IDD_OPTIONS DIALOGEX  0, 0, 120, 130
+STYLE WS_POPUP | WS_CAPTION 
+#ifdef UNDER_CE
+EXSTYLE WS_EX_CAPTIONOKBTN
+#endif
+CAPTION "Options"
+FONT 8, "System"
+
+BEGIN
+#ifndef UNDER_CE
+    PUSHBUTTON      "&OK",IDOK,7,98,40,15
+#endif
+    CONTROL         "No initial draw pile.",IDC_ENDGAME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,7,138,12
+    CONTROL         "&Group similiar cards together.",IDC_GROUPCARDS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,20,138,12
+    LTEXT           "Select card style:",IDC_DRAWSTYLE,7,57,153,10
+    LTEXT           "Computer difficulty:",IDC_DIFF_TEXT,7,33,153,10
+    COMBOBOX        IDC_DIFF,10,44,106,82,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+
+END
+
+IDD_STATS DIALOGEX  0, 0, 120, 110
+STYLE WS_POPUP | WS_CAPTION 
+#ifdef UNDER_CE
+EXSTYLE WS_EX_CAPTIONOKBTN
+#endif
+CAPTION "Stats"
+FONT 8, "System"
+
+BEGIN
+#ifndef UNDER_CE
+    PUSHBUTTON      "&OK",IDOK,44,85,50,16
+#endif
+    RTEXT           "Wins:",IDC_INFO_WINS,12,8,40,10
+    LTEXT           "0000",IDC_WINS,54,8,46,10
+    RTEXT           "Loses:",IDC_INFO_LOSES,12,26,40,10
+    LTEXT           "0000",IDC_LOSES,54,26,46,10
+
+    RTEXT           "Percentage:",IDC_INFO_PERCENTAGE,12,44,40,10
+    LTEXT           "0000",IDC_PERCENTAGE,54,44,46,10
+
+    PUSHBUTTON      "&Reset",IDC_RESET,44,60,50,16
+END
+
+IDC_PHYLLIS ACCELERATORS DISCARDABLE 
+BEGIN
+    "A",            IDM_HELP_ABOUT,	VIRTKEY, CONTROL, NOINVERT
+    "Q",            IDOK,			VIRTKEY, CONTROL, NOINVERT
+    "N",            IDM_GAME_NEW,   VIRTKEY, CONTROL, NOINVERT
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+   IDC_PHYLLIS			"PhyllisClass"
+   IDS_APP_TITLE		"Phyllis"
+   IDS_HELP				"Help"
+   IDS_GAME				"Game"
+   IDS_VERSION			"0.48"
+END
+
+#ifndef UNDER_CE
+1             BITMAP  DISCARDABLE     "PegBmp\\1.bmp"
+2             BITMAP  DISCARDABLE     "PegBmp\\2.bmp"
+3             BITMAP  DISCARDABLE     "PegBmp\\3.bmp"
+4             BITMAP  DISCARDABLE     "PegBmp\\4.bmp"
+5             BITMAP  DISCARDABLE     "PegBmp\\5.bmp"
+6             BITMAP  DISCARDABLE     "PegBmp\\6.bmp"
+7             BITMAP  DISCARDABLE     "PegBmp\\7.bmp"
+8             BITMAP  DISCARDABLE     "PegBmp\\8.bmp"
+9             BITMAP  DISCARDABLE     "PegBmp\\9.bmp"
+10             BITMAP  DISCARDABLE     "PegBmp\\10.bmp"
+11             BITMAP  DISCARDABLE     "PegBmp\\11.bmp"
+12             BITMAP  DISCARDABLE     "PegBmp\\12.bmp"
+13             BITMAP  DISCARDABLE     "PegBmp\\13.bmp"
+14             BITMAP  DISCARDABLE     "PegBmp\\14.bmp"
+15             BITMAP  DISCARDABLE     "PegBmp\\15.bmp"
+16             BITMAP  DISCARDABLE     "PegBmp\\16.bmp"
+17             BITMAP  DISCARDABLE     "PegBmp\\17.bmp"
+18             BITMAP  DISCARDABLE     "PegBmp\\18.bmp"
+19             BITMAP  DISCARDABLE     "PegBmp\\19.bmp"
+20             BITMAP  DISCARDABLE     "PegBmp\\20.bmp"
+21             BITMAP  DISCARDABLE     "PegBmp\\21.bmp"
+22             BITMAP  DISCARDABLE     "PegBmp\\22.bmp"
+23             BITMAP  DISCARDABLE     "PegBmp\\23.bmp"
+24             BITMAP  DISCARDABLE     "PegBmp\\24.bmp"
+25             BITMAP  DISCARDABLE     "PegBmp\\25.bmp"
+26             BITMAP  DISCARDABLE     "PegBmp\\26.bmp"
+27             BITMAP  DISCARDABLE     "PegBmp\\27.bmp"
+28             BITMAP  DISCARDABLE     "PegBmp\\28.bmp"
+29             BITMAP  DISCARDABLE     "PegBmp\\29.bmp"
+30             BITMAP  DISCARDABLE     "PegBmp\\30.bmp"
+31             BITMAP  DISCARDABLE     "PegBmp\\31.bmp"
+32             BITMAP  DISCARDABLE     "PegBmp\\32.bmp"
+33             BITMAP  DISCARDABLE     "PegBmp\\33.bmp"
+34             BITMAP  DISCARDABLE     "PegBmp\\34.bmp"
+35             BITMAP  DISCARDABLE     "PegBmp\\35.bmp"
+36             BITMAP  DISCARDABLE     "PegBmp\\36.bmp"
+37             BITMAP  DISCARDABLE     "PegBmp\\37.bmp"
+38             BITMAP  DISCARDABLE     "PegBmp\\38.bmp"
+39             BITMAP  DISCARDABLE     "PegBmp\\39.bmp"
+40             BITMAP  DISCARDABLE     "PegBmp\\40.bmp"
+41             BITMAP  DISCARDABLE     "PegBmp\\41.bmp"
+42             BITMAP  DISCARDABLE     "PegBmp\\42.bmp"
+43             BITMAP  DISCARDABLE     "PegBmp\\43.bmp"
+44             BITMAP  DISCARDABLE     "PegBmp\\44.bmp"
+45             BITMAP  DISCARDABLE     "PegBmp\\45.bmp"
+46             BITMAP  DISCARDABLE     "PegBmp\\46.bmp"
+47             BITMAP  DISCARDABLE     "PegBmp\\47.bmp"
+48             BITMAP  DISCARDABLE     "PegBmp\\48.bmp"
+49             BITMAP  DISCARDABLE     "PegBmp\\49.bmp"
+50             BITMAP  DISCARDABLE     "PegBmp\\50.bmp"
+51             BITMAP  DISCARDABLE     "PegBmp\\51.bmp"
+52             BITMAP  DISCARDABLE     "PegBmp\\52.bmp"
+61             BITMAP  DISCARDABLE     "PegBmp\\61.bmp"
+62             BITMAP  DISCARDABLE     "PegBmp\\62.bmp"
+63             BITMAP  DISCARDABLE     "PegBmp\\63.bmp"
+64             BITMAP  DISCARDABLE     "PegBmp\\64.bmp"
+65             BITMAP  DISCARDABLE     "PegBmp\\65.bmp"
+66             BITMAP  DISCARDABLE     "PegBmp\\66.bmp"
+69             BITMAP  DISCARDABLE     "PegBmp\\69.bmp"
+70             BITMAP  DISCARDABLE     "PegBmp\\70.bmp"
+71             BITMAP  DISCARDABLE     "PegBmp\\71.bmp"
+72             BITMAP  DISCARDABLE     "PegBmp\\72.bmp"
+73             BITMAP  DISCARDABLE     "PegBmp\\73.bmp"
+74             BITMAP  DISCARDABLE     "PegBmp\\74.bmp"
+75             BITMAP  DISCARDABLE     "PegBmp\\75.bmp"
+76             BITMAP  DISCARDABLE     "PegBmp\\76.bmp"
+77             BITMAP  DISCARDABLE     "PegBmp\\77.bmp"
+78             BITMAP  DISCARDABLE     "PegBmp\\78.bmp"
+79             BITMAP  DISCARDABLE     "PegBmp\\79.bmp"
+80             BITMAP  DISCARDABLE     "PegBmp\\80.bmp"
+#endif  // UNDER_CE
+
+#endif

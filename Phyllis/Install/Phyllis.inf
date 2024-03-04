@@ -1,0 +1,55 @@
+[Version]
+Signature = "$Windows NT$"
+Provider = "Scott Seligman"
+CESignature = "$Windows CE$"
+
+[CEStrings]
+AppName = "Phyllis"
+InstallDir = %CE1%
+
+[CEDevice.ARM_PPC]
+ProcessorType = 2577
+VersionMin = 3.0
+VersionMax = 1000.0
+   
+[CEDevice.SH3_PPC]
+ProcessorType = 10003
+VersionMin = 3.0
+VersionMax = 1000.0
+   
+[CEDevice.MIPS_PPC]
+ProcessorType = 4000
+VersionMin = 3.0
+VersionMax = 1000.0
+
+[DefaultInstall]
+CopyFiles = Files.MainEXE
+CEShortcuts = Shortcuts
+
+[SourceDisksNames.SH3_PPC]
+1 = ,"SH3 PPC files",,"C:\scott\My Projects\Phyllis\SH3Rel"
+
+[SourceDisksNames.MIPS_PPC]
+1 = ,"MIPS PPC files",,"C:\scott\My Projects\Phyllis\MIPSRel"
+
+[SourceDisksNames.ARM_PPC]
+1 = ,"ARM PPC files",,"C:\scott\My Projects\Phyllis\ARMRel"
+
+[SourceDisksFiles.SH3_PPC]
+Phyllis.exe = 1
+
+[SourceDisksFiles.ARM_PPC]
+Phyllis.exe = 1
+
+[SourceDisksFiles.MIPS_PPC]
+Phyllis.exe = 1
+
+[DestinationDirs]
+Files.MainEXE = ,%InstallDir%
+Shortcuts = 0,%CE14%
+
+[Files.MainEXE]
+Phyllis.exe,Phyllis.exe,,0
+
+[Shortcuts]
+Phyllis,0,Phyllis.exe

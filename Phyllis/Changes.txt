@@ -1,0 +1,34 @@
+---- Changes --------------
+
+---- 2001 12 31 - 0.43 ----
+- Initial release to public.
+
+---- 2002 01 04 - 0.46 ----
+- When the game ends, you see face down cards.
+- The dialog to pick how many similar cards to drop now comes up 
+  closer to where the stylus is.
+- Major architectural changes that will allow me to implement a better 
+  UI for the computer, and two player play (over IR or network).
+- The basic AI for the computer is slightly smarter.
+- Optional medium level difficulty AI.
+- Tap-and-hold on the discard or draw pile will display how many cards 
+  are remaining.
+
+---- 2002 01 06 - 0.47 ----
+- You can drop more than one similiar card from the faceup pile.
+- You can pickup a faceup card when you pick up the discard pile with 
+  no hand.
+- Smart AI deals with new end-game rules.
+- Updated copyright date
+
+---- Done -----------------
+
+---- Todo -----------------
+- Better difficulty for the AI
+- Tool-tips for the desktop
+- Two player play.
+- Three or more player play.
+
+---------------------------
+- Win percentage = 58.47167%
+-                  59.66000
