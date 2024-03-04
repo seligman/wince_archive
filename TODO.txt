@@ -4,5 +4,5 @@
 [x] RandomName
 [x] PowerOff
 [x] NewShortcut
-[ ] FixKews
+[x] FixKeys
 [ ] SoundControl
