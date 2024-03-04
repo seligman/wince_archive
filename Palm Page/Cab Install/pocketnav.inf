@@ -1,0 +1,36 @@
+[Version]
+Signature   = "$Windows NT$"    ; required as-is
+Provider    = "Scott Seligman"          ; full app name will be "<Provider> <AppName>"
+CESignature = "$Windows CE$"    ; required as-is
+
+[CEStrings]
+AppName     = "PocketNav"      ; full app name will be "<Provider> <AppName>"
+InstallDir  = %CE5%
+
+[CEDevice.ARM]
+ProcessorType = 2577
+
+[SourceDisksNames]
+1 = ,"Common Files",,.
+
+[SourceDisksNames.ARM]
+2 = ,"ARMv4 Files",,.\
+
+[SourceDisksFiles]
+
+[SourceDisksFiles.ARM]
+pocketnav.exe = 2
+
+[DefaultInstall]
+CopyFiles = TheFiles
+CEShortcuts = Shortcuts   
+
+[DestinationDirs]
+TheFiles = 0, %InstallDir%
+Shortcuts   = 0, %CE11%
+
+[TheFiles]
+PocketNav.exe,,0
+
+[Shortcuts]
+%AppName%,0,pocketnav.exe

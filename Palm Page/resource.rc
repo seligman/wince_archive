@@ -1,0 +1,134 @@
+#ifdef APSTUDIO_INVOKED
+#error "Don't do that!"
+#endif    // APSTUDIO_INVOKED
+
+#include "resource.h"
+#include "afxres.h"
+
+IDI_MAINICON            ICON    DISCARDABLE     "icon1.ico"
+IDI_OPT_TODAY           ICON    DISCARDABLE     "opt_toda.ico"
+IDI_OPT_TASK            ICON    DISCARDABLE     "opt_task.ico"
+IDI_OPT_TASK_SEL        ICON    DISCARDABLE     "ico00001.ico"
+IDI_OPT_TODAY_SEL       ICON    DISCARDABLE     "ico00002.ico"
+IDI_OK_SEL              ICON    DISCARDABLE     "ok_sel.ico"
+IDI_OK                  ICON    DISCARDABLE     "ok.ico"
+IDI_BORDER_ICON         ICON    DISCARDABLE     "border_i.ico"
+IDI_VOLUME              ICON    DISCARDABLE     "volume.ico"
+IDI_BIG_BORDER          ICON    DISCARDABLE     "ico00003.ico"
+IDI_MYCLOSE             ICON    DISCARDABLE     "ico00004.ico"
+IDI_MYCLOSE_SEL         ICON    DISCARDABLE     "ico00005.ico"
+IDI_2CLOSE_SEL          ICON    DISCARDABLE     "ico00006.ico"
+IDI_2OK_SEL             ICON    DISCARDABLE     "icon2.ico"
+IDI_2CLOSE              ICON    DISCARDABLE     "icon3.ico"
+IDI_2OK                 ICON    DISCARDABLE     "icon4.ico"
+
+IDR_OPTIONSMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Actions...",                  IDM_ACTIONS
+        MENUITEM SEPARATOR
+        MENUITEM "Close Palm Page",             IDM_EXITAPP
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About...",                    IDM_ABOUT
+    END
+END
+
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION VERSION_1,VERSION_2,VERSION_3,0
+ PRODUCTVERSION VERSION_1,VERSION_2,VERSION_3,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "Scott Seligman <scott@scottandmichelle.net>\0"
+            VALUE "FileDescription", "PocketNav\0"
+            VALUE "FileVersion", VERSION_CHAR "\0"
+            VALUE "InternalName", "PocketNav\0"
+            VALUE "LegalCopyright", "Copyright © " VERSION_YEAR "\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "PocketNav.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "PocketNav\0"
+            VALUE "ProductVersion", VERSION_CHAR "\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+IDD_CONTROL DIALOG DISCARDABLE  0, 0, 42, 95
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS,19,14,17,59
+    LTEXT           "Volume",IDC_STATIC,8,2,30,9
+    CONTROL         "Mute",IDC_MUTE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,4,
+                    74,38,11
+    PUSHBUTTON      "Dismiss",IDC_OK,0,85,41,10
+END
+
+IDD_OPTIONS DIALOG DISCARDABLE  0, 0, 131, 118
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE 0x80000000L
+CAPTION "Options"
+FONT 8, "System"
+BEGIN
+    EDITTEXT        IDC_SHORT,25,69,62,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin1",IDC_SHORT_SPIN,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,89,69,11,13
+    EDITTEXT        IDC_LONG,25,95,62,12,ES_AUTOHSCROLL | ES_READONLY
+    CONTROL         "Spin1",IDC_LONG_SPIN,"msctls_updown32",UDS_ALIGNRIGHT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,89,95,11,13
+    LTEXT           "Double Tap",IDC_STATIC,13,58,40,14
+    LTEXT           "Tap and Hold",IDC_STATIC,13,84,57,14
+    LTEXT           "Set the speeds used for double tap and tap and hold.  Speeds are in milliseconds (1/1000th of a second).  Minimum is 50, and max is 5000.  Tap and hold time needs to be longer than double tap time.",
+                    IDC_STATIC,0,0,131,54
+END
+
+IDD_ORDER DIALOG DISCARDABLE  0, 0, 147, 114
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Icon Order"
+FONT 8, "System"
+BEGIN
+    COMBOBOX        IDC_ORDER_1,20,17,110,107,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ORDER_2,20,31,110,107,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ORDER_3,20,45,110,107,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ORDER_4,20,59,110,107,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ORDER_5,20,73,110,107,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_ORDER_6,20,87,110,107,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+END
+
+IDB_CLOSE_SEL           BITMAP  DISCARDABLE     "close_sel.bmp"
+IDB_CLOSE               BITMAP  DISCARDABLE     "close.bmp"
+IDB_CLOSE_SEL2          BITMAP  DISCARDABLE     "close2_sel.bmp"
+IDB_CLOSE2              BITMAP  DISCARDABLE     "close2.bmp"
+
+HI_RES_AWARE CEUX MOVEABLE PURE 
+BEGIN
+    0x0001
+END
