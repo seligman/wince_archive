@@ -5,4 +5,4 @@
 [x] PowerOff
 [x] NewShortcut
 [x] FixKeys
-[ ] SoundControl
+[x] SoundControl
