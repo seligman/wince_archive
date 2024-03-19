@@ -1,0 +1,27 @@
+Vertical that must be broken
+0 - 10
+17 - 27
+
+"blocked.bmp", "cross.bmp", "vertical.bmp", "start_ri.bmp", "start_le.bmp", 
+"start_do.bmp", "top_righ.bmp", "bottom_r.bmp", "top_left.bmp", 
+"bottom_l.bmp", "horizont.bmp", "blank.bmp", "start_to.bmp", 
+"2tart_to.bmp", "2tart_le.bmp", "2tart_ri.bmp", "2tart_do.bmp"
+
+ 1 IDB_BLOCKED             BITMAP  DISCARDABLE     "blocked.bmp"
+ 2 IDB_CROSS               BITMAP  DISCARDABLE     "cross.bmp"
+ 3 IDB_VERTICAL            BITMAP  DISCARDABLE     "vertical.bmp"
+ 4 IDB_START_RIGHT         BITMAP  DISCARDABLE     "start_ri.bmp"
+ 5 IDB_START_LEFT          BITMAP  DISCARDABLE     "start_le.bmp"
+ 6 IDB_START_DOWN          BITMAP  DISCARDABLE     "start_do.bmp"
+ 7 IDB_TOP_RIGHT           BITMAP  DISCARDABLE     "top_righ.bmp"
+ 8 IDB_BOTTOM_RIGHT        BITMAP  DISCARDABLE     "bottom_r.bmp"
+ 9 IDB_TOP_LEFT            BITMAP  DISCARDABLE     "top_left.bmp"
+10 IDB_BOTTOM_LEFT         BITMAP  DISCARDABLE     "bottom_l.bmp"
+11 IDB_HORIZONTAL          BITMAP  DISCARDABLE     "horizont.bmp"
+12 IDB_BLANK               BITMAP  DISCARDABLE     "blank.bmp"
+13 IDB_START_TOP           BITMAP  DISCARDABLE     "start_to.bmp"
+   IDB_CLOSE               BITMAP  DISCARDABLE     "bitmap1.bmp"
+14 IDB_START_TOP_FAST      BITMAP  DISCARDABLE     "2tart_to.bmp"
+15 IDB_START_LEFT_FAST     BITMAP  DISCARDABLE     "2tart_le.bmp"
+16 IDB_START_RIGHT_FAST    BITMAP  DISCARDABLE     "2tart_ri.bmp"
+17 IDB_START_DOWN_FAST     BITMAP  DISCARDABLE     "2tart_do.bmp"

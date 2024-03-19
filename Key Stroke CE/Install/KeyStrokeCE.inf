@@ -1,0 +1,74 @@
+[Version]
+Signature = "$Windows NT$"
+Provider = "Scott Seligman"
+CESignature = "$Windows CE$"
+
+[CEStrings]
+AppName = KeyStrokeCE"
+InstallDir = %CE2%
+
+[CEDevice.SH3_CE]
+ProcessorType = 10003
+VersionMin = 2.00
+VersionMax = 2.11
+   
+[CEDevice.MIPS_CE]
+ProcessorType = 4000
+VersionMin = 2.00
+VersionMax = 2.11
+
+[CEDevice.ARM_PPC]
+ProcessorType = 2577
+VersionMin = 3.0
+VersionMax = 1000.0
+   
+[CEDevice.SH3_PPC]
+ProcessorType = 10003
+VersionMin = 3.0
+VersionMax = 1000.0
+   
+[CEDevice.MIPS_PPC]
+ProcessorType = 4000
+VersionMin = 3.0
+VersionMax = 1000.0
+
+[DefaultInstall]
+CopyFiles = Files.MainEXE
+CESelfRegister=KeyStrokeCE.dll
+
+[SourceDisksNames.SH3_CE]
+1 = ,"SH3 CE files",,"C:\Scott\My Projects\KeyStrokeCE\Outputs\SH3 - 2.11"
+
+[SourceDisksNames.MIPS_CE]
+1 = ,"MIPS CE files",,"C:\Scott\My Projects\KeyStrokeCE\Outputs\MIPS - 2.11"
+
+[SourceDisksNames.SH3_PPC]
+1 = ,"SH3 PPC files",,"C:\Scott\My Projects\KeyStrokeCE\Outputs\SH3 - PocketPC"
+
+[SourceDisksNames.MIPS_PPC]
+1 = ,"MIPS PPC files",,"C:\Scott\My Projects\KeyStrokeCE\Outputs\MIPS - PocketPC"
+
+[SourceDisksNames.ARM_PPC]
+1 = ,"ARM PPC files",,"C:\Scott\My Projects\KeyStrokeCE\Outputs\ARM - PocketPC"
+
+
+[SourceDisksFiles.SH3_CE]
+KeyStrokeCE.dll = 1
+
+[SourceDisksFiles.MIPS_CE]
+KeyStrokeCE.dll = 1
+
+[SourceDisksFiles.SH3_PPC]
+KeyStrokeCE.dll = 1
+
+[SourceDisksFiles.ARM_PPC]
+KeyStrokeCE.dll = 1
+
+[SourceDisksFiles.MIPS_PPC]
+KeyStrokeCE.dll = 1
+
+[DestinationDirs]
+Files.MainEXE = ,%InstallDir%
+
+[Files.MainEXE]
+KeyStrokeCE.dll,KeyStrokeCE.dll,,0

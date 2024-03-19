@@ -1,0 +1,945 @@
+# Microsoft eMbedded Visual Tools Generated NMAKE File, Based on KeyStrokeCE.vcp
+!IF "$(CFG)" == ""
+CFG=KeyStrokeCE - Win32 (WCE MIPS) Debug
+!MESSAGE No configuration specified. Defaulting to KeyStrokeCE - Win32 (WCE MIPS) Debug.
+!ENDIF 
+
+!IF "$(CESubsystem)" == ""
+CESubsystem=windowsce,2.0
+!MESSAGE Variable CESubsystem not specified. Defaulting to windowsce,2.11
+!ENDIF 
+
+!IF "$(CEVersion)" == ""
+CEVersion=200
+!MESSAGE Variable CEVersion not specified. Defaulting to 211
+!ENDIF 
+
+!IF $(CEVersion) < 201
+CECrt=L
+CECrtDebug=Ld
+CECrtMT=T
+CECrtMTDebug=Td
+CENoDefaultLib=corelibc.lib
+CEx86Corelibc= 
+!ELSE 
+CECrt=C
+CECrtDebug=C
+CECrtMT=C
+CECrtMTDebug=C
+CENoDefaultLib=libc.lib /nodefaultlib:libcd.lib /nodefaultlib:libcmt.lib /nodefaultlib:libcmtd.lib /nodefaultlib:msvcrt.lib /nodefaultlib:msvcrtd.lib
+CEx86Corelibc=corelibc.lib
+!ENDIF 
+
+!IF "$(CE_PLATFORM)"==""
+CePlatform=WIN32_PLATFORM_UNKNOWN
+!ELSE 
+CePlatform=$(CE_PLATFORM)
+!ENDIF 
+
+!IF "$(CFG)" != "KeyStrokeCE - Win32 (WCE MIPS) Release" && "$(CFG)" != "KeyStrokeCE - Win32 (WCE MIPS) Debug" && "$(CFG)" != "KeyStrokeCE - Win32 (WCE SH3) Release" && "$(CFG)" != "KeyStrokeCE - Win32 (WCE SH3) Debug" && "$(CFG)" != "KeyStrokeCE - Win32 (WCE ARM) Release" && "$(CFG)" != "KeyStrokeCE - Win32 (WCE ARM) Debug" && "$(CFG)" != "KeyStrokeCE - Win32 (WCE x86em) Release" && "$(CFG)" != "KeyStrokeCE - Win32 (WCE x86em) Debug"
+!MESSAGE Invalid configuration "$(CFG)" specified.
+!MESSAGE You can specify a configuration when running NMAKE
+!MESSAGE by defining the macro CFG on the command line. For example:
+!MESSAGE 
+!MESSAGE NMAKE /f "KeyStrokeCE.vcn" CFG="KeyStrokeCE - Win32 (WCE MIPS) Debug"
+!MESSAGE 
+!MESSAGE Possible choices for configuration are:
+!MESSAGE 
+!MESSAGE "KeyStrokeCE - Win32 (WCE MIPS) Release" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "KeyStrokeCE - Win32 (WCE MIPS) Debug" (based on "Win32 (WCE MIPS) Dynamic-Link Library")
+!MESSAGE "KeyStrokeCE - Win32 (WCE SH3) Release" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "KeyStrokeCE - Win32 (WCE SH3) Debug" (based on "Win32 (WCE SH3) Dynamic-Link Library")
+!MESSAGE "KeyStrokeCE - Win32 (WCE ARM) Release" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "KeyStrokeCE - Win32 (WCE ARM) Debug" (based on "Win32 (WCE ARM) Dynamic-Link Library")
+!MESSAGE "KeyStrokeCE - Win32 (WCE x86em) Release" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE "KeyStrokeCE - Win32 (WCE x86em) Debug" (based on "Win32 (WCE x86em) Dynamic-Link Library")
+!MESSAGE 
+!ERROR An invalid configuration is specified.
+!ENDIF 
+
+!IF "$(OS)" == "Windows_NT"
+NULL=
+!ELSE 
+NULL=nul
+!ENDIF 
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+OUTDIR=.\MIPSRel
+INTDIR=.\MIPSRel
+# Begin Custom Macros
+OutDir=.\MIPSRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\KeyStrokeCE.dll"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\KeyStrokeCE.obj"
+	-@erase "$(INTDIR)\MainWnd.obj"
+	-@erase "$(INTDIR)\Movement.obj"
+	-@erase "$(INTDIR)\resource.res"
+	-@erase "$(OUTDIR)\KeyStrokeCE.dll"
+	-@erase "$(OUTDIR)\KeyStrokeCE.exp"
+	-@erase "$(OUTDIR)\KeyStrokeCE.lib"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\resource.res" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "MIPS" /d "_MIPS_" /r 
+CPP=clmips.exe
+CPP_PROJ=/nologo /W3 /GX- /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Oxs /M$(CECrtMT)  /c 
+!IF "$(CEConfigName)" == "Palm-size PC 2.01"
+CPP_PROJ=/nologo /W3 /GX- /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Oxs /M$(CECrtMT)  /c  /QMOC 
+!ENDIF
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\KeyStrokeCE.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib   /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /incremental:no /pdb:"$(OUTDIR)\KeyStrokeCE.pdb" /nodefaultlib:"$(CENoDefaultLib)" /def:".\exports.def" /out:"$(OUTDIR)\KeyStrokeCE.dll" /implib:"$(OUTDIR)\KeyStrokeCE.lib" /subsystem:$(CESubsystem) /MACHINE:MIPS   
+DEF_FILE= \
+	".\exports.def"
+LINK32_OBJS= \
+	"$(INTDIR)\MainWnd.obj" \
+	"$(INTDIR)\KeyStrokeCE.obj" \
+	"$(INTDIR)\Movement.obj" \
+	"$(INTDIR)\resource.res"
+
+"$(OUTDIR)\KeyStrokeCE.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+OUTDIR=.\MIPSDbg
+INTDIR=.\MIPSDbg
+# Begin Custom Macros
+OutDir=.\MIPSDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\KeyStrokeCE.dll"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\KeyStrokeCE.obj"
+	-@erase "$(INTDIR)\MainWnd.obj"
+	-@erase "$(INTDIR)\Movement.obj"
+	-@erase "$(INTDIR)\resource.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\KeyStrokeCE.dll"
+	-@erase "$(OUTDIR)\KeyStrokeCE.exp"
+	-@erase "$(OUTDIR)\KeyStrokeCE.ilk"
+	-@erase "$(OUTDIR)\KeyStrokeCE.lib"
+	-@erase "$(OUTDIR)\KeyStrokeCE.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\resource.res" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "MIPS" /d "_MIPS_" /r 
+CPP=clmips.exe
+CPP_PROJ=/nologo /W3 /GX- /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /M$(CECrtMTDebug)  /c 
+!IF "$(CEConfigName)" == "Palm-size PC 2.01"
+CPP_PROJ=/nologo /W3 /GX- /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "MIPS" /D "_MIPS_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /M$(CECrtMTDebug)  /c  /QMOC 
+!ENDIF
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\KeyStrokeCE.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib   /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /incremental:yes /pdb:"$(OUTDIR)\KeyStrokeCE.pdb" /debug /nodefaultlib:"$(CENoDefaultLib)" /def:".\exports.def" /out:"$(OUTDIR)\KeyStrokeCE.dll" /implib:"$(OUTDIR)\KeyStrokeCE.lib" /subsystem:$(CESubsystem) /MACHINE:MIPS   
+DEF_FILE= \
+	".\exports.def"
+LINK32_OBJS= \
+	"$(INTDIR)\MainWnd.obj" \
+	"$(INTDIR)\KeyStrokeCE.obj" \
+	"$(INTDIR)\Movement.obj" \
+	"$(INTDIR)\resource.res"
+
+"$(OUTDIR)\KeyStrokeCE.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+OUTDIR=.\SH3Rel
+INTDIR=.\SH3Rel
+# Begin Custom Macros
+OutDir=.\SH3Rel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\KeyStrokeCE.dll"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\KeyStrokeCE.obj"
+	-@erase "$(INTDIR)\MainWnd.obj"
+	-@erase "$(INTDIR)\Movement.obj"
+	-@erase "$(INTDIR)\resource.res"
+	-@erase "$(OUTDIR)\KeyStrokeCE.dll"
+	-@erase "$(OUTDIR)\KeyStrokeCE.exp"
+	-@erase "$(OUTDIR)\KeyStrokeCE.lib"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\resource.res" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "SHx" /d "SH3" /d "_SH3_" /r 
+CPP=shcl.exe
+CPP_PROJ=/nologo /W3 /GX- /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Oxs /M$(CECrtMT)  /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\KeyStrokeCE.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib   /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /incremental:no /pdb:"$(OUTDIR)\KeyStrokeCE.pdb" /nodefaultlib:"$(CENoDefaultLib)" /def:".\exports.def" /out:"$(OUTDIR)\KeyStrokeCE.dll" /implib:"$(OUTDIR)\KeyStrokeCE.lib" /subsystem:$(CESubsystem) /MACHINE:SH3   
+DEF_FILE= \
+	".\exports.def"
+LINK32_OBJS= \
+	"$(INTDIR)\MainWnd.obj" \
+	"$(INTDIR)\KeyStrokeCE.obj" \
+	"$(INTDIR)\Movement.obj" \
+	"$(INTDIR)\resource.res"
+
+"$(OUTDIR)\KeyStrokeCE.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+OUTDIR=.\SH3Dbg
+INTDIR=.\SH3Dbg
+# Begin Custom Macros
+OutDir=.\SH3Dbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\KeyStrokeCE.dll"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\KeyStrokeCE.obj"
+	-@erase "$(INTDIR)\MainWnd.obj"
+	-@erase "$(INTDIR)\Movement.obj"
+	-@erase "$(INTDIR)\resource.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\KeyStrokeCE.dll"
+	-@erase "$(OUTDIR)\KeyStrokeCE.exp"
+	-@erase "$(OUTDIR)\KeyStrokeCE.ilk"
+	-@erase "$(OUTDIR)\KeyStrokeCE.lib"
+	-@erase "$(OUTDIR)\KeyStrokeCE.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\resource.res" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "SHx" /d "SH3" /d "_SH3_" /r 
+CPP=shcl.exe
+CPP_PROJ=/nologo /W3 /GX- /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "SHx" /D "SH3" /D "_SH3_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /M$(CECrtMTDebug)  /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\KeyStrokeCE.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib   /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /incremental:yes /pdb:"$(OUTDIR)\KeyStrokeCE.pdb" /debug /nodefaultlib:"$(CENoDefaultLib)" /def:".\exports.def" /out:"$(OUTDIR)\KeyStrokeCE.dll" /implib:"$(OUTDIR)\KeyStrokeCE.lib" /subsystem:$(CESubsystem) /MACHINE:SH3   
+DEF_FILE= \
+	".\exports.def"
+LINK32_OBJS= \
+	"$(INTDIR)\MainWnd.obj" \
+	"$(INTDIR)\KeyStrokeCE.obj" \
+	"$(INTDIR)\Movement.obj" \
+	"$(INTDIR)\resource.res"
+
+"$(OUTDIR)\KeyStrokeCE.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+OUTDIR=.\ARMRel
+INTDIR=.\ARMRel
+# Begin Custom Macros
+OutDir=.\ARMRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\KeyStrokeCE.dll"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\KeyStrokeCE.obj"
+	-@erase "$(INTDIR)\MainWnd.obj"
+	-@erase "$(INTDIR)\Movement.obj"
+	-@erase "$(INTDIR)\resource.res"
+	-@erase "$(OUTDIR)\KeyStrokeCE.dll"
+	-@erase "$(OUTDIR)\KeyStrokeCE.exp"
+	-@erase "$(OUTDIR)\KeyStrokeCE.lib"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\resource.res" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r 
+CPP=clarm.exe
+CPP_PROJ=/nologo /W3 /GX- /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "NDEBUG" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Oxs /M$(CECrtMT)  /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\KeyStrokeCE.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib   /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /incremental:no /pdb:"$(OUTDIR)\KeyStrokeCE.pdb" /nodefaultlib:"$(CENoDefaultLib)" /def:".\exports.def" /out:"$(OUTDIR)\KeyStrokeCE.dll" /implib:"$(OUTDIR)\KeyStrokeCE.lib" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM   
+DEF_FILE= \
+	".\exports.def"
+LINK32_OBJS= \
+	"$(INTDIR)\MainWnd.obj" \
+	"$(INTDIR)\KeyStrokeCE.obj" \
+	"$(INTDIR)\Movement.obj" \
+	"$(INTDIR)\resource.res"
+
+"$(OUTDIR)\KeyStrokeCE.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+OUTDIR=.\ARMDbg
+INTDIR=.\ARMDbg
+# Begin Custom Macros
+OutDir=.\ARMDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\KeyStrokeCE.dll"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\KeyStrokeCE.obj"
+	-@erase "$(INTDIR)\MainWnd.obj"
+	-@erase "$(INTDIR)\Movement.obj"
+	-@erase "$(INTDIR)\resource.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\KeyStrokeCE.dll"
+	-@erase "$(OUTDIR)\KeyStrokeCE.exp"
+	-@erase "$(OUTDIR)\KeyStrokeCE.ilk"
+	-@erase "$(OUTDIR)\KeyStrokeCE.lib"
+	-@erase "$(OUTDIR)\KeyStrokeCE.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\resource.res" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "ARM" /d "_ARM_" /r 
+CPP=clarm.exe
+CPP_PROJ=/nologo /W3 /GX- /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "$(CePlatform)" /D "ARM" /D "_ARM_" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /M$(CECrtMTDebug)  /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\KeyStrokeCE.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib   /nologo /base:"0x00100000" /stack:0x10000,0x1000 /entry:"_DllMainCRTStartup" /dll /incremental:yes /pdb:"$(OUTDIR)\KeyStrokeCE.pdb" /debug /nodefaultlib:"$(CENoDefaultLib)" /def:".\exports.def" /out:"$(OUTDIR)\KeyStrokeCE.dll" /implib:"$(OUTDIR)\KeyStrokeCE.lib" /subsystem:$(CESubsystem) /align:"4096" /MACHINE:ARM   
+DEF_FILE= \
+	".\exports.def"
+LINK32_OBJS= \
+	"$(INTDIR)\MainWnd.obj" \
+	"$(INTDIR)\KeyStrokeCE.obj" \
+	"$(INTDIR)\Movement.obj" \
+	"$(INTDIR)\resource.res"
+
+"$(OUTDIR)\KeyStrokeCE.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+OUTDIR=.\X86EMRel
+INTDIR=.\X86EMRel
+# Begin Custom Macros
+OutDir=.\X86EMRel
+# End Custom Macros
+
+ALL : "$(OUTDIR)\KeyStrokeCE.dll"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\KeyStrokeCE.obj"
+	-@erase "$(INTDIR)\MainWnd.obj"
+	-@erase "$(INTDIR)\Movement.obj"
+	-@erase "$(INTDIR)\resource.res"
+	-@erase "$(OUTDIR)\KeyStrokeCE.dll"
+	-@erase "$(OUTDIR)\KeyStrokeCE.exp"
+	-@erase "$(OUTDIR)\KeyStrokeCE.lib"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\resource.res" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "NDEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "i486" /r 
+CPP=cl.exe
+CPP_PROJ=/nologo /W3 /GX- /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "$(CePlatform)" /D "i486" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "NDEBUG" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Gz /Oxs  /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "NDEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\KeyStrokeCE.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib $(CEx86Corelibc)   /nologo /stack:0x10000,0x1000 /dll /incremental:no /pdb:"$(OUTDIR)\KeyStrokeCE.pdb" /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /def:".\exports.def" /out:"$(OUTDIR)\KeyStrokeCE.dll" /implib:"$(OUTDIR)\KeyStrokeCE.lib" /windowsce:emulation /MACHINE:IX86   
+DEF_FILE= \
+	".\exports.def"
+LINK32_OBJS= \
+	"$(INTDIR)\MainWnd.obj" \
+	"$(INTDIR)\KeyStrokeCE.obj" \
+	"$(INTDIR)\Movement.obj" \
+	"$(INTDIR)\resource.res"
+
+"$(OUTDIR)\KeyStrokeCE.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+OUTDIR=.\X86EMDbg
+INTDIR=.\X86EMDbg
+# Begin Custom Macros
+OutDir=.\X86EMDbg
+# End Custom Macros
+
+ALL : "$(OUTDIR)\KeyStrokeCE.dll"
+
+
+CLEAN :
+	-@erase "$(INTDIR)\KeyStrokeCE.obj"
+	-@erase "$(INTDIR)\MainWnd.obj"
+	-@erase "$(INTDIR)\Movement.obj"
+	-@erase "$(INTDIR)\resource.res"
+	-@erase "$(INTDIR)\vc60.pdb"
+	-@erase "$(OUTDIR)\KeyStrokeCE.dll"
+	-@erase "$(OUTDIR)\KeyStrokeCE.exp"
+	-@erase "$(OUTDIR)\KeyStrokeCE.ilk"
+	-@erase "$(OUTDIR)\KeyStrokeCE.lib"
+	-@erase "$(OUTDIR)\KeyStrokeCE.pdb"
+
+"$(OUTDIR)" :
+    if not exist "$(OUTDIR)/$(NULL)" mkdir "$(OUTDIR)"
+
+RSC=rc.exe
+RSC_PROJ=/l 0x409 /fo"$(INTDIR)\resource.res" /d UNDER_CE=$(CEVersion) /d _WIN32_WCE=$(CEVersion) /d "UNICODE" /d "_UNICODE" /d "DEBUG" /d "$(CePlatform)" /d "_X86_" /d "x86" /d "i486" /r 
+CPP=cl.exe
+CPP_PROJ=/nologo /W3 /GX- /Zi /Od /D "DEBUG" /D _WIN32_WCE=$(CEVersion) /D "WIN32" /D "STRICT" /D "_WIN32_WCE_EMULATION" /D "INTERNATIONAL" /D "USA" /D "INTLMSG_CODEPAGE" /D "$(CePlatform)" /D "i486" /D UNDER_CE=$(CEVersion) /D "UNICODE" /D "_UNICODE" /D "_X86_" /D "x86" /D "_USRDLL" /D "KEYSTROKECE_EXPORTS" /Fp"$(INTDIR)\KeyStrokeCE.pch" /YX /Fo"$(INTDIR)\\" /Fd"$(INTDIR)\\" /Gz  /c 
+
+.c{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.obj::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.c{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cpp{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+.cxx{$(INTDIR)}.sbr::
+   $(CPP) @<<
+   $(CPP_PROJ) $< 
+<<
+
+MTL=midl.exe
+MTL_PROJ=/nologo /D "_DEBUG" /mktyplib203 /o "NUL" /win32 
+BSC32=bscmake.exe
+BSC32_FLAGS=/nologo /o"$(OUTDIR)\KeyStrokeCE.bsc" 
+BSC32_SBRS= \
+	
+LINK32=link.exe
+LINK32_FLAGS=commctrl.lib coredll.lib $(CEx86Corelibc)   /nologo /stack:0x10000,0x1000 /dll /incremental:yes /pdb:"$(OUTDIR)\KeyStrokeCE.pdb" /debug /nodefaultlib:"OLDNAMES.lib" /nodefaultlib:$(CENoDefaultLib) /def:".\exports.def" /out:"$(OUTDIR)\KeyStrokeCE.dll" /implib:"$(OUTDIR)\KeyStrokeCE.lib" /windowsce:emulation /MACHINE:IX86   
+DEF_FILE= \
+	".\exports.def"
+LINK32_OBJS= \
+	"$(INTDIR)\MainWnd.obj" \
+	"$(INTDIR)\KeyStrokeCE.obj" \
+	"$(INTDIR)\Movement.obj" \
+	"$(INTDIR)\resource.res"
+
+"$(OUTDIR)\KeyStrokeCE.dll" : "$(OUTDIR)" $(DEF_FILE) $(LINK32_OBJS)
+    $(LINK32) @<<
+  $(LINK32_FLAGS) $(LINK32_OBJS)
+<<
+
+!ENDIF 
+
+
+!IF "$(NO_EXTERNAL_DEPS)" != "1"
+!IF EXISTS("KeyStrokeCE.dep")
+!INCLUDE "KeyStrokeCE.dep"
+!ELSE 
+!MESSAGE Warning: cannot find "KeyStrokeCE.dep"
+!ENDIF 
+!ENDIF 
+
+
+!IF "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release" || "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug" || "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release" || "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug" || "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release" || "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug" || "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release" || "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+SOURCE=.\KeyStrokeCE.cpp
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+
+"$(INTDIR)\KeyStrokeCE.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+
+"$(INTDIR)\KeyStrokeCE.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+
+"$(INTDIR)\KeyStrokeCE.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+
+"$(INTDIR)\KeyStrokeCE.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+
+"$(INTDIR)\KeyStrokeCE.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+
+"$(INTDIR)\KeyStrokeCE.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+
+"$(INTDIR)\KeyStrokeCE.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+
+"$(INTDIR)\KeyStrokeCE.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ENDIF 
+
+SOURCE=.\MainWnd.cpp
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+
+"$(INTDIR)\MainWnd.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+
+"$(INTDIR)\MainWnd.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+
+"$(INTDIR)\MainWnd.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+
+"$(INTDIR)\MainWnd.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+
+"$(INTDIR)\MainWnd.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+
+"$(INTDIR)\MainWnd.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+
+"$(INTDIR)\MainWnd.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+
+"$(INTDIR)\MainWnd.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ENDIF 
+
+SOURCE=.\Movement.cpp
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+
+"$(INTDIR)\Movement.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+
+"$(INTDIR)\Movement.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+
+"$(INTDIR)\Movement.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+
+"$(INTDIR)\Movement.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+
+"$(INTDIR)\Movement.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+
+"$(INTDIR)\Movement.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+
+"$(INTDIR)\Movement.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+
+"$(INTDIR)\Movement.obj" : $(SOURCE) "$(INTDIR)"
+
+
+!ENDIF 
+
+SOURCE=.\resource.rc
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+
+"$(INTDIR)\resource.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+
+"$(INTDIR)\resource.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+
+"$(INTDIR)\resource.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+
+"$(INTDIR)\resource.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+
+"$(INTDIR)\resource.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+
+"$(INTDIR)\resource.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+
+"$(INTDIR)\resource.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+
+"$(INTDIR)\resource.res" : $(SOURCE) "$(INTDIR)"
+	$(RSC) $(RSC_PROJ) $(SOURCE)
+
+
+!ENDIF 
+
+
+!ENDIF 
+

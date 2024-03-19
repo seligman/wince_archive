@@ -21,6 +21,8 @@ BAD_FILES = [
     '.*\\.vbw$',
     '.*\\.pyc$',
     '.*\\.bak$',
+    '.*\\.plg$',
+    '.*\\.vcl$',
     '.*/MSSCCPRJ.SCC$',
     '.*cache\\.dat',
     '.*\\.signature.p7s$',
@@ -87,7 +89,10 @@ def find_compiled():
 
         if is_bad:
             issues["Bad files"] += 1
-            print(f'del "{cur}"')
+            if is_file:
+                print(f'del "{cur}"')
+            else:
+                print(f'rmdir "{cur}"')
         
         if not os.access(cur, os.W_OK):
             issues["Readonly files"] += 1

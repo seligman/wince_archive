@@ -1,0 +1,546 @@
+# eMbedded Visual C++ Dependency File, included by KeyStrokeCE.vcn
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+.\KeyStrokeCE.cpp : \
+	".\KeyStrokeCE.h"\
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"coguid.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+.\KeyStrokeCE.cpp : \
+	".\KeyStrokeCE.h"\
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"coguid.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+.\KeyStrokeCE.cpp : \
+	".\KeyStrokeCE.h"\
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"coguid.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+.\KeyStrokeCE.cpp : \
+	".\KeyStrokeCE.h"\
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"coguid.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+.\KeyStrokeCE.cpp : \
+	".\KeyStrokeCE.h"\
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"coguid.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+.\KeyStrokeCE.cpp : \
+	".\KeyStrokeCE.h"\
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"coguid.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+.\KeyStrokeCE.cpp : \
+	".\KeyStrokeCE.h"\
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"coguid.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+.\KeyStrokeCE.cpp : \
+	".\KeyStrokeCE.h"\
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"coguid.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+.\MainWnd.cpp : \
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"keybd.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+.\MainWnd.cpp : \
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"keybd.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+.\MainWnd.cpp : \
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"keybd.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+.\MainWnd.cpp : \
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"keybd.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+.\MainWnd.cpp : \
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"keybd.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+.\MainWnd.cpp : \
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"keybd.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+.\MainWnd.cpp : \
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"keybd.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+.\MainWnd.cpp : \
+	".\main.h"\
+	".\MainWnd.h"\
+	".\Movement.h"\
+	{$(INCLUDE)}"aygshell.h"\
+	{$(INCLUDE)}"keybd.h"\
+	{$(INCLUDE)}"sip.h"\
+	{$(INCLUDE)}"sipapi.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+.\Movement.cpp : \
+	".\Movement.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+.\Movement.cpp : \
+	".\Movement.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+.\Movement.cpp : \
+	".\Movement.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+.\Movement.cpp : \
+	".\Movement.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+.\Movement.cpp : \
+	".\Movement.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+.\Movement.cpp : \
+	".\Movement.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+.\Movement.cpp : \
+	".\Movement.h"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+.\Movement.cpp : \
+	".\Movement.h"\
+	
+
+!ENDIF 
+
+!IF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Release"
+
+.\resource.rc : \
+	".\DrawStuff\keypad.bmp"\
+	".\DrawStuff\keypad_down.bmp"\
+	".\narrow.bmp"\
+	".\narrow_mask.bmp"\
+	".\NumPanel.ico"\
+	".\Snipper\cells.dat"\
+	".\Snipper\key_alt_1.bmp"\
+	".\Snipper\key_alt_2.bmp"\
+	".\Snipper\key_cap_1.bmp"\
+	".\Snipper\key_cap_2.bmp"\
+	".\Snipper\key_nrm_1.bmp"\
+	".\Snipper\key_nrm_2.bmp"\
+	".\Snipper\key_num_1.bmp"\
+	".\Snipper\key_num_2.bmp"\
+	".\Snipper\middle.bmp"\
+	".\Snipper\state_alt_1.bmp"\
+	".\Snipper\state_alt_2.bmp"\
+	".\Snipper\state_alt_locked_1.bmp"\
+	".\Snipper\state_alt_locked_2.bmp"\
+	".\Snipper\state_cap_1.bmp"\
+	".\Snipper\state_cap_2.bmp"\
+	".\Snipper\state_cap_locked_1.bmp"\
+	".\Snipper\state_cap_locked_2.bmp"\
+	".\Snipper\state_nrm_1.bmp"\
+	".\Snipper\state_nrm_2.bmp"\
+	".\Snipper\state_num_1.bmp"\
+	".\Snipper\state_num_2.bmp"\
+	".\Snipper\state_num_locked_1.bmp"\
+	".\Snipper\state_num_locked_2.bmp"\
+	".\wide.bmp"\
+	".\wide_mask.bmp"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE MIPS) Debug"
+
+.\resource.rc : \
+	".\DrawStuff\keypad.bmp"\
+	".\DrawStuff\keypad_down.bmp"\
+	".\narrow.bmp"\
+	".\narrow_mask.bmp"\
+	".\NumPanel.ico"\
+	".\Snipper\cells.dat"\
+	".\Snipper\key_alt_1.bmp"\
+	".\Snipper\key_alt_2.bmp"\
+	".\Snipper\key_cap_1.bmp"\
+	".\Snipper\key_cap_2.bmp"\
+	".\Snipper\key_nrm_1.bmp"\
+	".\Snipper\key_nrm_2.bmp"\
+	".\Snipper\key_num_1.bmp"\
+	".\Snipper\key_num_2.bmp"\
+	".\Snipper\middle.bmp"\
+	".\Snipper\state_alt_1.bmp"\
+	".\Snipper\state_alt_2.bmp"\
+	".\Snipper\state_alt_locked_1.bmp"\
+	".\Snipper\state_alt_locked_2.bmp"\
+	".\Snipper\state_cap_1.bmp"\
+	".\Snipper\state_cap_2.bmp"\
+	".\Snipper\state_cap_locked_1.bmp"\
+	".\Snipper\state_cap_locked_2.bmp"\
+	".\Snipper\state_nrm_1.bmp"\
+	".\Snipper\state_nrm_2.bmp"\
+	".\Snipper\state_num_1.bmp"\
+	".\Snipper\state_num_2.bmp"\
+	".\Snipper\state_num_locked_1.bmp"\
+	".\Snipper\state_num_locked_2.bmp"\
+	".\wide.bmp"\
+	".\wide_mask.bmp"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Release"
+
+.\resource.rc : \
+	".\DrawStuff\keypad.bmp"\
+	".\DrawStuff\keypad_down.bmp"\
+	".\narrow.bmp"\
+	".\narrow_mask.bmp"\
+	".\NumPanel.ico"\
+	".\Snipper\cells.dat"\
+	".\Snipper\key_alt_1.bmp"\
+	".\Snipper\key_alt_2.bmp"\
+	".\Snipper\key_cap_1.bmp"\
+	".\Snipper\key_cap_2.bmp"\
+	".\Snipper\key_nrm_1.bmp"\
+	".\Snipper\key_nrm_2.bmp"\
+	".\Snipper\key_num_1.bmp"\
+	".\Snipper\key_num_2.bmp"\
+	".\Snipper\middle.bmp"\
+	".\Snipper\state_alt_1.bmp"\
+	".\Snipper\state_alt_2.bmp"\
+	".\Snipper\state_alt_locked_1.bmp"\
+	".\Snipper\state_alt_locked_2.bmp"\
+	".\Snipper\state_cap_1.bmp"\
+	".\Snipper\state_cap_2.bmp"\
+	".\Snipper\state_cap_locked_1.bmp"\
+	".\Snipper\state_cap_locked_2.bmp"\
+	".\Snipper\state_nrm_1.bmp"\
+	".\Snipper\state_nrm_2.bmp"\
+	".\Snipper\state_num_1.bmp"\
+	".\Snipper\state_num_2.bmp"\
+	".\Snipper\state_num_locked_1.bmp"\
+	".\Snipper\state_num_locked_2.bmp"\
+	".\wide.bmp"\
+	".\wide_mask.bmp"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE SH3) Debug"
+
+.\resource.rc : \
+	".\DrawStuff\keypad.bmp"\
+	".\DrawStuff\keypad_down.bmp"\
+	".\narrow.bmp"\
+	".\narrow_mask.bmp"\
+	".\NumPanel.ico"\
+	".\Snipper\cells.dat"\
+	".\Snipper\key_alt_1.bmp"\
+	".\Snipper\key_alt_2.bmp"\
+	".\Snipper\key_cap_1.bmp"\
+	".\Snipper\key_cap_2.bmp"\
+	".\Snipper\key_nrm_1.bmp"\
+	".\Snipper\key_nrm_2.bmp"\
+	".\Snipper\key_num_1.bmp"\
+	".\Snipper\key_num_2.bmp"\
+	".\Snipper\middle.bmp"\
+	".\Snipper\state_alt_1.bmp"\
+	".\Snipper\state_alt_2.bmp"\
+	".\Snipper\state_alt_locked_1.bmp"\
+	".\Snipper\state_alt_locked_2.bmp"\
+	".\Snipper\state_cap_1.bmp"\
+	".\Snipper\state_cap_2.bmp"\
+	".\Snipper\state_cap_locked_1.bmp"\
+	".\Snipper\state_cap_locked_2.bmp"\
+	".\Snipper\state_nrm_1.bmp"\
+	".\Snipper\state_nrm_2.bmp"\
+	".\Snipper\state_num_1.bmp"\
+	".\Snipper\state_num_2.bmp"\
+	".\Snipper\state_num_locked_1.bmp"\
+	".\Snipper\state_num_locked_2.bmp"\
+	".\wide.bmp"\
+	".\wide_mask.bmp"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Release"
+
+.\resource.rc : \
+	".\DrawStuff\keypad.bmp"\
+	".\DrawStuff\keypad_down.bmp"\
+	".\narrow.bmp"\
+	".\narrow_mask.bmp"\
+	".\NumPanel.ico"\
+	".\Snipper\cells.dat"\
+	".\Snipper\key_alt_1.bmp"\
+	".\Snipper\key_alt_2.bmp"\
+	".\Snipper\key_cap_1.bmp"\
+	".\Snipper\key_cap_2.bmp"\
+	".\Snipper\key_nrm_1.bmp"\
+	".\Snipper\key_nrm_2.bmp"\
+	".\Snipper\key_num_1.bmp"\
+	".\Snipper\key_num_2.bmp"\
+	".\Snipper\middle.bmp"\
+	".\Snipper\state_alt_1.bmp"\
+	".\Snipper\state_alt_2.bmp"\
+	".\Snipper\state_alt_locked_1.bmp"\
+	".\Snipper\state_alt_locked_2.bmp"\
+	".\Snipper\state_cap_1.bmp"\
+	".\Snipper\state_cap_2.bmp"\
+	".\Snipper\state_cap_locked_1.bmp"\
+	".\Snipper\state_cap_locked_2.bmp"\
+	".\Snipper\state_nrm_1.bmp"\
+	".\Snipper\state_nrm_2.bmp"\
+	".\Snipper\state_num_1.bmp"\
+	".\Snipper\state_num_2.bmp"\
+	".\Snipper\state_num_locked_1.bmp"\
+	".\Snipper\state_num_locked_2.bmp"\
+	".\wide.bmp"\
+	".\wide_mask.bmp"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE ARM) Debug"
+
+.\resource.rc : \
+	".\DrawStuff\keypad.bmp"\
+	".\DrawStuff\keypad_down.bmp"\
+	".\narrow.bmp"\
+	".\narrow_mask.bmp"\
+	".\NumPanel.ico"\
+	".\Snipper\cells.dat"\
+	".\Snipper\key_alt_1.bmp"\
+	".\Snipper\key_alt_2.bmp"\
+	".\Snipper\key_cap_1.bmp"\
+	".\Snipper\key_cap_2.bmp"\
+	".\Snipper\key_nrm_1.bmp"\
+	".\Snipper\key_nrm_2.bmp"\
+	".\Snipper\key_num_1.bmp"\
+	".\Snipper\key_num_2.bmp"\
+	".\Snipper\middle.bmp"\
+	".\Snipper\state_alt_1.bmp"\
+	".\Snipper\state_alt_2.bmp"\
+	".\Snipper\state_alt_locked_1.bmp"\
+	".\Snipper\state_alt_locked_2.bmp"\
+	".\Snipper\state_cap_1.bmp"\
+	".\Snipper\state_cap_2.bmp"\
+	".\Snipper\state_cap_locked_1.bmp"\
+	".\Snipper\state_cap_locked_2.bmp"\
+	".\Snipper\state_nrm_1.bmp"\
+	".\Snipper\state_nrm_2.bmp"\
+	".\Snipper\state_num_1.bmp"\
+	".\Snipper\state_num_2.bmp"\
+	".\Snipper\state_num_locked_1.bmp"\
+	".\Snipper\state_num_locked_2.bmp"\
+	".\wide.bmp"\
+	".\wide_mask.bmp"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Release"
+
+.\resource.rc : \
+	".\DrawStuff\keypad.bmp"\
+	".\DrawStuff\keypad_down.bmp"\
+	".\narrow.bmp"\
+	".\narrow_mask.bmp"\
+	".\NumPanel.ico"\
+	".\Snipper\cells.dat"\
+	".\Snipper\key_alt_1.bmp"\
+	".\Snipper\key_alt_2.bmp"\
+	".\Snipper\key_cap_1.bmp"\
+	".\Snipper\key_cap_2.bmp"\
+	".\Snipper\key_nrm_1.bmp"\
+	".\Snipper\key_nrm_2.bmp"\
+	".\Snipper\key_num_1.bmp"\
+	".\Snipper\key_num_2.bmp"\
+	".\Snipper\middle.bmp"\
+	".\Snipper\state_alt_1.bmp"\
+	".\Snipper\state_alt_2.bmp"\
+	".\Snipper\state_alt_locked_1.bmp"\
+	".\Snipper\state_alt_locked_2.bmp"\
+	".\Snipper\state_cap_1.bmp"\
+	".\Snipper\state_cap_2.bmp"\
+	".\Snipper\state_cap_locked_1.bmp"\
+	".\Snipper\state_cap_locked_2.bmp"\
+	".\Snipper\state_nrm_1.bmp"\
+	".\Snipper\state_nrm_2.bmp"\
+	".\Snipper\state_num_1.bmp"\
+	".\Snipper\state_num_2.bmp"\
+	".\Snipper\state_num_locked_1.bmp"\
+	".\Snipper\state_num_locked_2.bmp"\
+	".\wide.bmp"\
+	".\wide_mask.bmp"\
+	
+
+!ELSEIF  "$(CFG)" == "KeyStrokeCE - Win32 (WCE x86em) Debug"
+
+.\resource.rc : \
+	".\DrawStuff\keypad.bmp"\
+	".\DrawStuff\keypad_down.bmp"\
+	".\narrow.bmp"\
+	".\narrow_mask.bmp"\
+	".\NumPanel.ico"\
+	".\Snipper\cells.dat"\
+	".\Snipper\key_alt_1.bmp"\
+	".\Snipper\key_alt_2.bmp"\
+	".\Snipper\key_cap_1.bmp"\
+	".\Snipper\key_cap_2.bmp"\
+	".\Snipper\key_nrm_1.bmp"\
+	".\Snipper\key_nrm_2.bmp"\
+	".\Snipper\key_num_1.bmp"\
+	".\Snipper\key_num_2.bmp"\
+	".\Snipper\middle.bmp"\
+	".\Snipper\state_alt_1.bmp"\
+	".\Snipper\state_alt_2.bmp"\
+	".\Snipper\state_alt_locked_1.bmp"\
+	".\Snipper\state_alt_locked_2.bmp"\
+	".\Snipper\state_cap_1.bmp"\
+	".\Snipper\state_cap_2.bmp"\
+	".\Snipper\state_cap_locked_1.bmp"\
+	".\Snipper\state_cap_locked_2.bmp"\
+	".\Snipper\state_nrm_1.bmp"\
+	".\Snipper\state_nrm_2.bmp"\
+	".\Snipper\state_num_1.bmp"\
+	".\Snipper\state_num_2.bmp"\
+	".\Snipper\state_num_locked_1.bmp"\
+	".\Snipper\state_num_locked_2.bmp"\
+	".\wide.bmp"\
+	".\wide_mask.bmp"\
+	
+
+!ENDIF 
+
